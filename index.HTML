@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head?>
+<body style="background-color: #ccfdff;">
+
+	<p style="font-size: 128px; text-align: center; font-family:'Comic Sans MS';"> You just met Fischer Wagstaff </p>
+
+	<button class="block" onclick="openStuff();">Click here to learn more</button>
+
+<style>
+.block {
+  display: block;
+  width: 100%;
+  block-border: 30px black;
+  background-color: #FEFE68;
+  color: black;
+  padding: 50px 50px;
+  font-size: 128px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block:hover {
+  background-color: #ddd;
+  color: black;
+}
+</style>
+
+<script>
+    
+// the used links
+var links = [
+    "www.youtube.com/watch?v=oCmeAiblet4"];
+
+openStuff = function () {
+    // get a random number between 0 and the number of links
+    var randIdx = Math.random() * links.length;
+    // round it, so it can be used as array index
+    randIdx = parseInt(randIdx, 10);
+    // construct the link to be opened
+    var link = 'http://' + links[randIdx];
+    // open it in a new window
+    window.open(link);
+};
+
+</script>
+</body>
+</html>
